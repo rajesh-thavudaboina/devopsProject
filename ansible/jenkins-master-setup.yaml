@@ -14,8 +14,13 @@
 
   - name: install java 
     apt: 
-      name: openjdk-11-jre
+      name: openjdk-21-jre
       state: present
+
+  - name: install fontconfig  
+    apt: 
+      name: fontconfig 
+      state: present 
 
   - name: install jenkins 
     apt: 
@@ -31,4 +36,3 @@
     service: 
       name: jenkins 
       enabled: yes 
-      
